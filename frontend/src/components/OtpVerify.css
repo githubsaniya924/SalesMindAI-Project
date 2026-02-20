@@ -1,0 +1,152 @@
+/* Wrapper */
+.otp-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #4c1d95, #6d28d9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Floating cards */
+.floating-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.float-card {
+  position: absolute;
+  font-size: 40px;
+  opacity: 0.45;
+  animation: float 10s ease-in-out infinite;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
+}
+
+.c1 { left: 10%; top: 30%; }
+.c2 { right: 15%; top: 25%; }
+.c3 { left: 25%; bottom: 20%; }
+.c4 { right: 20%; bottom: 30%; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+  100% { transform: translateY(0); }
+}
+
+/* Card */
+.otp-card {
+  background: white;
+  padding: 40px;
+  width: 420px;
+  border-radius: 22px;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.otp-logo {
+  font-size: 36px;
+  background: #7c3aed;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* OTP Input */
+.otp-input {
+  width: 100%;
+  padding: 14px;
+  font-size: 20px;
+  letter-spacing: 8px;
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  outline: none;
+  transition: 0.2s;
+}
+
+.otp-input:focus {
+  border-color: #7c3aed;
+}
+
+.otp-input.disabled {
+  background: #f3f4f6;
+}
+
+/* Timer */
+.timer {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.expired {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Buttons */
+.verify-btn {
+  margin-top: 20px;
+  width: 100%;
+  background: #111827;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.verify-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.resend-btn {
+  margin-top: 14px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.resend-btn.active {
+  color: #7c3aed;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Message */
+.message {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #374151;
+}
+

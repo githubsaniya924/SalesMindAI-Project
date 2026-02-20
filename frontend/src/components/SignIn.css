@@ -1,0 +1,193 @@
+/* Page Wrapper */
+.signin-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #4c1d95, #6d28d9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Floating icons */
+.signin-bg .icon {
+  position: absolute;
+  font-size: 36px;
+  opacity: 0.35;
+  animation: floatSlow 12s infinite ease-in-out;
+}
+
+.i1 { left: 12%; top: 25%; }
+.i2 { right: 15%; top: 30%; }
+.i3 { left: 22%; bottom: 20%; }
+.i4 { right: 20%; bottom: 25%; }
+
+@keyframes floatSlow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-35px); }
+  100% { transform: translateY(0); }
+}
+
+/* Card */
+.signin-card {
+  width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 22px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 35px 90px rgba(0,0,0,0.3);
+  animation: cardPulse 6s ease-in-out infinite;
+}
+
+@keyframes cardPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.01); }
+}
+
+/* Rotating Ring */
+.ring {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 3px dashed #c4b5fd;
+  border-radius: 50%;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+
+/* Logo */
+.signin-logo {
+  width: 60px;
+  height: 60px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.signin-card input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  margin-bottom: 14px;
+  outline: none;
+}
+
+.signin-card input:focus {
+  border-color: #7c3aed;
+}
+
+/* Error */
+.error {
+  color: #dc2626;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.signin-btn {
+  width: 100%;
+  background: #111827;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.divider {
+  margin: 20px 0;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Google */
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.google-btn img {
+  width: 20px;
+}
+
+/* Footer */
+.footer-text {
+  font-size: 14px;
+  margin-top: 18px;
+  color: #6b7280;
+}
+
+.footer-text span {
+  color: #7c3aed;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* ... keep all your existing CSS and add these below ... */
+
+.forgot-link-container {
+  text-align: right;
+  margin-bottom: 15px;
+  margin-top: -5px;
+}
+
+.forgot-link {
+  font-size: 13px;
+  color: #7c3aed;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+  color: #4c1d95;
+}
+
+.success-msg {
+  color: #059669;
+  background: #ecfdf5;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
