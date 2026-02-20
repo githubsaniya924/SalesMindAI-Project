@@ -38,7 +38,7 @@ function LeadUpload() {
     formData.append("file", file);
 
     try {
-      const res = await api.post("/leads/upload", formData, {
+      await api.post("/leads/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setMessage("Leads uploaded successfully.");
