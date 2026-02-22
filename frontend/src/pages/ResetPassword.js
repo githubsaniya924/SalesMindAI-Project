@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../components/SignIn.css"; // Reuse your existing beautiful styles
+import "../components/Auth.css"; // Reuse your existing beautiful styles
 
 export default function ResetPassword() {
   const { token } = useParams(); // Grabs the token from the URL

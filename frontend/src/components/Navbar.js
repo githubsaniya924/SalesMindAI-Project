@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <h2 className="logo">SalesMind AI</h2>
+        <h2 className="logo"><Link to="/">SalesMind AI</Link></h2>
         <ul className="nav-links">
           <li><Link to="/leads">Leads</Link></li>
           <li><Link to="/b2b">B2B</Link></li>

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -24,10 +25,10 @@ code {
 html, body, #root {
   margin: 0;
   padding: 0;
+  height: 100%;
   width: 100%;
-  min-height: 100vh;
-  background-color: #0f0821; /* Match Home.css --bg-dark */
-  color: #ffffff;
+  background: #0f0821;
 }
+
 
 

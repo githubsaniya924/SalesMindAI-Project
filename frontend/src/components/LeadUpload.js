@@ -51,7 +51,7 @@ function LeadUpload() {
   };
 
   return (
-    <div className="dashboard-wrapper"> {/* Uses background from Dashboard.css */}
+    <div className="leadupload-wrapper"> {/* Uses background from Dashboard.css */}
       <Navbar />
       <div className="upload-content-area">
         <div className="upload-card stat-card"> {/* Inherits glass styles */}

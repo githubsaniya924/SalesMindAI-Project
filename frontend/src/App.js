@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import LeadUploadPage from "./pages/LeadUploadPage";
+import LeadUpload from "./components/LeadUpload"; // ✅ changed
 import B2BGeneratorPage from "./pages/B2BGeneratorPage";
 import B2CGeneratorPage from "./pages/B2CGeneratorPage";
 import Dashboard from "./pages/DashBoard";
@@ -22,15 +22,13 @@ function App() {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/verify-otp" element={<OtpVerifyPage />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/leads" element={<LeadUploadPage />} />
+        <Route path="/leads" element={<LeadUpload />} /> {/* ✅ changed */}
         <Route path="/b2b" element={<B2BGeneratorPage />} />
         <Route path="/b2c" element={<B2CGeneratorPage />} />
-   
-       <Route path="/pricing" element={<PricingPage />} />
-       <Route path="/payment" element={<ProtectedRoute><PaymentPage /></ProtectedRoute> } />
-       <Route path="/dashboard" element={<ProtectedRoute><Dashboard /> </ProtectedRoute>} />
-      <Route path="/reset-password/:token" element={<ResetPassword />} />
-        
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/payment" element={<ProtectedRoute><PaymentPage /></ProtectedRoute>} />
+        <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
       </Routes>
     </BrowserRouter>
   );
